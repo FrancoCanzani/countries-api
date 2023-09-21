@@ -8,12 +8,16 @@ fs.readFile('src/data/countriesData.json', 'utf-8', (error, data) => {
     throw error;
   }
 
-  //   We always need to convert the readfile result to json as it comes as string
+  // We always need to convert the readfile result to json as it comes as string
   const countries = JSON.parse(data);
 
   app.get('/countries', (req, res) => {
     res.send(countries);
   });
+});
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the root of the application.'); // You can send any response you want here.
 });
 
 export default app;
