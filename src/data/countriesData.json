@@ -3040,7 +3040,7 @@
         "symbol": "G"
       }
     },
-    "capital": ["Port-au-Prince"],
+    "capital": ["Port au Prince"],
     "languages": {
       "fra": "French",
       "hat": "Haitian Creole"
@@ -3427,7 +3427,7 @@
         "symbol": "₪"
       }
     },
-    "capital": ["Jerusalem"],
+    "capital": ["Tel Aviv"],
     "languages": {
       "ara": "Arabic",
       "heb": "Hebrew"
@@ -4584,7 +4584,7 @@
         "symbol": "L"
       }
     },
-    "capital": ["Chișinău"],
+    "capital": ["Chisinau"],
     "languages": {
       "ron": "Romanian"
     },
@@ -7625,7 +7625,7 @@
         "symbol": "$"
       }
     },
-    "capital": ["Washington, D.C."],
+    "capital": ["Washington D.C."],
     "languages": {
       "eng": "English"
     },
@@ -7654,7 +7654,7 @@
         "symbol": "$"
       }
     },
-    "capital": ["Washington DC"],
+    "capital": ["Washington D.C."],
     "languages": {
       "eng": "English"
     },
