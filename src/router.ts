@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import Country from './utils/types';
 import fs from 'fs';
 
 const router = Router();
@@ -24,7 +25,7 @@ fs.readFile('src/data/countriesData.json', 'utf-8', (error, data) => {
     const countryName = req.params.countryName;
 
     const country = countries.find(
-      (country) =>
+      (country: Country) =>
         country.name.common.toLowerCase() === countryName.toLowerCase()
     );
 
@@ -39,7 +40,7 @@ fs.readFile('src/data/countriesData.json', 'utf-8', (error, data) => {
   router.get('/countries/continent/:continentName', (req, res) => {
     const continentName = req.params.continentName;
 
-    const countriesInContinent = countries.filter((country) =>
+    const countriesInContinent = countries.filter((country: Country) =>
       country.continents.includes(continentName)
     );
 
@@ -54,7 +55,7 @@ fs.readFile('src/data/countriesData.json', 'utf-8', (error, data) => {
   router.get('/countries/language/:languageName', (req, res) => {
     const languageName = req.params.languageName;
 
-    const countriesWithLanguage = countries.filter((country) =>
+    const countriesWithLanguage = countries.filter((country: Country) =>
       Object.values(country.languages).includes(languageName)
     );
 
@@ -70,7 +71,7 @@ fs.readFile('src/data/countriesData.json', 'utf-8', (error, data) => {
     const populationSize = parseInt(req.params.populationSize); // Parse the population size as an integer
 
     const countriesWithPopulationOverPopulationSize = countries.filter(
-      (country) => country.population >= populationSize
+      (country: Country) => country.population >= populationSize
     );
 
     if (countriesWithPopulationOverPopulationSize.length > 0) {
