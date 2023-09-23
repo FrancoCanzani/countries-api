@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import fs from 'fs';
+
 const router = Router();
 
 fs.readFile('src/data/countriesData.json', 'utf-8', (error, data) => {
